@@ -18,9 +18,9 @@ function bubbleSort(array,judge = defaultJudge) {
     if(array == null || loopCount < 2) {
         return array;
     }
-    // for (let i = array.length; i > 0; i--) {
+    // for (let i = loopCount; i > 0; i--) {
     //     for (let j = 0; j < i - 1; j++) {
-    //         if(array[j] > array[j+1]) {
+    //         if(judge(array[j], array[j+1])) {
     //             swap(array, j, j+1);
     //         }
     //     }

@@ -40,10 +40,12 @@ function quickSort(array, start, end, judge = defaultJudge) {
             pivot = left;
         }
     }
-    quickSort(array, start, pivot);
-    quickSort(array, pivot + 1, end);
+    quickSort(array, start, pivot - 1, judge);
+    quickSort(array, pivot + 1, end, judge);
     return array;
 }
 
 const res = quickSort(mockData, START, END);
 console.log('res::', res);
+const res2 = quickSort(mockData, START, END, (pre, next) => pre < next);
+console.log('res2::', res2);
