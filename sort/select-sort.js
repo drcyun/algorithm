@@ -3,7 +3,7 @@
  * @author drcyun
  */
 
-import {swap, defaultJudge} from './utils.js'
+import { swap, defaultJudge } from './utils.js'
 
 const mockData = [1,3,2,8,4,7,5,6,4];
 
@@ -15,7 +15,7 @@ const mockData = [1,3,2,8,4,7,5,6,4];
  */
 function selectSort(array, judge = defaultJudge) {
     let loopCount = array.length;
-    if(array == null || loopCount < 2) {
+    if (array == null || loopCount < 2) {
         return array;
     }
     for (let i = 0;i < loopCount;i++) {

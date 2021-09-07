@@ -3,7 +3,7 @@
  * @author drcyun
  */
 
-import {swap, defaultJudge} from "./utils.js";
+import { swap, defaultJudge } from "./utils.js";
 
 const mockData = [1,3,2,8,4,7,5,6,4];
 const START = 0;
@@ -21,21 +21,21 @@ function quickSort(array, start, end, judge = defaultJudge) {
     let pivot = start;
     let left = start;
     let right = end;
-    if(right - left <= 1) {
+    if (right - left <= 1) {
         return array;
     }
-    while(left < right) {
-        while(right > pivot && judge(array[right], array[pivot])) {
+    while (left < right) {
+        while (right > pivot && judge(array[right], array[pivot])) {
             right--;
         }
-        if(end > pivot) {
+        if (end > pivot) {
             swap(array, pivot, right);
             pivot = right;
         }
-        while(left < pivot && !judge(array[left], array[pivot])) {
+        while (left < pivot && !judge(array[left], array[pivot])) {
             left++;
         }
-        if(left < pivot) {
+        if (left < pivot) {
             swap(array, pivot, left);
             pivot = left;
         }

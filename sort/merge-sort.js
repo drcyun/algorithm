@@ -3,7 +3,7 @@
  * @author dryun
  */
 
-import {defaultJudge} from "./utils.js";
+import { defaultJudge } from "./utils.js";
 
 const mockData = [1,3,2,8,4,7,5,6,4];
 
@@ -17,7 +17,7 @@ const mockData = [1,3,2,8,4,7,5,6,4];
 function merge(left, right, judge) {
     let result = [];
     while (left.length > 0 && right.length > 0) {
-        if(judge(left[0], right[0])) {
+        if (judge(left[0], right[0])) {
             result.push(right.shift());
         } else {
             result.push(left.shift());
@@ -33,7 +33,7 @@ function merge(left, right, judge) {
  * @returns {Array}
  */
 function mergeSort(array, judge = defaultJudge) {
-    if(array.length == 1) {
+    if (array.length == 1) {
         return array;
     }
     let mid = Math.floor(array.length / 2);

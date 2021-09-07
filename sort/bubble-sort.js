@@ -3,7 +3,7 @@
  * @author drcyun
  */
 
-import {swap, defaultJudge} from "./utils.js";
+import { swap, defaultJudge } from "./utils.js";
 
 const mockData = [1,3,2,8,4,7,5,6,4];
 
@@ -15,19 +15,19 @@ const mockData = [1,3,2,8,4,7,5,6,4];
  */
 function bubbleSort(array,judge = defaultJudge) {
     let loopCount = array.length;
-    if(array == null || loopCount < 2) {
+    if (array == null || loopCount < 2) {
         return array;
     }
     // for (let i = loopCount; i > 0; i--) {
     //     for (let j = 0; j < i - 1; j++) {
-    //         if(judge(array[j], array[j+1])) {
+    //         if (judge(array[j], array[j+1])) {
     //             swap(array, j, j+1);
     //         }
     //     }
     // }
     while (loopCount--) {
         for (let j = 0; j < loopCount; j++) {
-            if(judge(array[j], array[j+1])) {
+            if (judge(array[j], array[j+1])) {
                 swap(array, j, j+1);
             }
         }
