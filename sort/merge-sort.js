@@ -46,3 +46,8 @@ const res = mergeSort(mockData);
 console.log('res::', res);
 const res2 = mergeSort(mockData, (pre, next) => pre < next);
 console.log('res2::', res2);
+
+
+// 常见通过归并排序实现的例题
+// 1. 小和问题
+// 2. 逆序对问题
