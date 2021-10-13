@@ -21,7 +21,7 @@ function quickSort(array, start, end, judge = defaultJudge) {
     let pivot = start;
     let left = start;
     let right = end;
-    if (right - left <= 1) {
+    if (right - left < 1) {
         return array;
     }
     while (left < right) {
