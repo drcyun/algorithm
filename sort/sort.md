@@ -21,3 +21,7 @@
 5. 归并排序（二路）
 
    merge-sort.js
+
+6. 堆排序
+   
+   heap-sort.js
