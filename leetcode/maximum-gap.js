@@ -26,3 +26,4 @@ function maximumGap(nums) {
 
 const res = maximumGap(mockData);
 console.log('res::', res);
+
