@@ -22,5 +22,16 @@ function distributeCandies(candyType) {
     }
 }
 
+/**
+ * @param {number[]} candyType
+ * @return {number}
+ */
+function distributeCandies2(candyType) {
+    let set = new Set(candyType);
+    return Math.min(set.size, candyType.length >> 1);
+}
+
 const res = distributeCandies(mockData);
 console.log('res::', res);
+const res2 = distributeCandies2(mockData);
+console.log('res2::', res2);
