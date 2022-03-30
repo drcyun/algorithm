@@ -34,7 +34,17 @@ function heapSort(arr, judge = defaultJudge) {
     return temp;
 }
 
-const res = heapSort(mockData)
+function sort(arr, judge = defaultJudge) {
+    let res = [];
+    let tempArr = [...arr];
+    while (tempArr.length) {
+        tempArr = heapSort(tempArr, judge);
+        res.push(tempArr.shift())
+    }
+    return res;
+}
+
+const res = sort(mockData)
 console.log('res::', res);
-const res2 = heapSort(mockData, (pre, next) => pre < next);
-console.log('res2::', res2);
+// const res2 = sort(mockData, (pre, next) => pre < next);
+// console.log('res2::', res2);
